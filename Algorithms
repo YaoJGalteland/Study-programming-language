@@ -1,0 +1,17 @@
+# Find the Symmetric Difference
+
+# Find the symmetric difference of two elements
+def diff(a,b):   
+    a = set(a)
+    b = set(b)
+    return a.symmetric_difference(b)
+
+# Output the symmetric difference of arbitrary number of elements
+def sym(*args):  
+    c = set()
+    for x in args:
+        c = diff(x,c)
+    return c
+
+# Test sample:
+print(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]))
