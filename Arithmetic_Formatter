@@ -70,7 +70,6 @@ def arithmetic_arranger(problems, args = False):
     arranged_problems = arranged_problems + '-' * result[num_problems-1][0]
 
     if args == True:
-        print('ok')
         arranged_problems = arranged_problems + '\n'
         for i in range(num_problems - 1):
             arranged_problems = arranged_problems + ' ' * (result[i][0] - len(str(result[i][3]))) + str(result[i][3]) + ' ' * 4
