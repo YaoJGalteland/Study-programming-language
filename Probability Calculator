@@ -1,0 +1,43 @@
+import copy
+import random
+# Consider using the modules imported above.
+
+class Hat:
+
+    def __init__(self, **kwargs):
+        self.contents = []
+        for key, value in kwargs.items():
+            for i in range(value):
+                self.contents.append(key)
+
+    def draw(self, num):  # num = the number of balls to draw from the hat
+        total = len(self.contents)
+        result = list()
+        if num > total:
+            return self.contents
+        for i in range(num):
+            num_random = random.randint(0, total-1)  # return a random number
+            result.append(self.contents[num_random])  # add the random ball into drawed balls
+            self.contents.pop(num_random)
+            total -= 1
+        return result
+
+
+def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+    expected_list = []
+    for key in expected_balls:   # store expected_balls into a list
+        for i in range(expected_balls[key]):
+            expected_list.append(key)
+
+    count = 0
+    for i in range(num_experiments):
+        hat_temp = copy.deepcopy(hat)  # copy hat for iteration
+        draw_list = hat_temp.draw(num_balls_drawn)  # draw balls in each experiment
+        flag = 1
+        for x in expected_list:    # check if expected_list is a sublist of draw_list
+            if x in draw_list:
+                draw_list.remove(x)
+            else:
+                flag = 0
+        count += flag
+    return count/num_experiments
