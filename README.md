@@ -1,4 +1,4 @@
 # Study-Python
 
-Test
-Test again
+Small projects:
+(1) Arithmetic_Formatter
