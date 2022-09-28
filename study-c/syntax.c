@@ -20,8 +20,6 @@ int distinct(int A[], int N){
         }
     }
     return count;
-
-
 }
 
 //structures
@@ -31,6 +29,7 @@ struct student
     int age;
     int grade;
 };
+
 int main(){
     // Data type
     int day;
@@ -49,8 +48,6 @@ int main(){
     // user input
     printf("Enter a number for weekday: \n");
     scanf("%d", &day);
-    
-
 
     // if else
     if (A[0] < A[1]) {
