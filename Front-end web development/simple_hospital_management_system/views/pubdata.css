@@ -1,0 +1,42 @@
+body {
+  background-color: #eee;
+}
+
+/* Main data element (<div> tag) */
+.data {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* data text */
+.dataText {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+/* data name (<ul> tag) 
+.dataName {
+  color: #428bca;
+  text-decoration: none;
+  margin-right: 5px;
+}*/
+.dataTitle:hover {
+  text-decoration: none;
+}
+
+/* data URL (<span> tag) */
+.dataUrl {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+/* data headline containing title & URL (<h4> tag) */
+.dataHeadline {
+  margin: 0;
+}
+
+
+.dataForm {
+  margin-bottom: 20px;
+}
