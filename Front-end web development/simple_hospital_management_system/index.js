@@ -51,6 +51,6 @@ app.post("/datas", upload.array(), (request, response) => {
 
 // Start listening to incoming requests
 // If process.env.PORT is not defined, port number 3000 is used
-const listener = app.listen(process.env.PORT || 3000, () => {
+const listener = app.listen(process.env.PORT || 4000, () => {
   console.log(`Your app is listening on port ${listener.address().port}`);
 });
