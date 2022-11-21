@@ -24,19 +24,7 @@ app.use((req, res, next) => {
 });
 
 // Define an article list
-const articles = [
-  { title: "First article", content: "Hello World!" },
-  {
-    title: "Lorem ipsum",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit mauris ac porttitor accumsan. Nunc vitae pulvinar odio, auctor interdum dolor. Aenean sodales dui quis metus iaculis, hendrerit vulputate lorem vestibulum."
-  },
-  {
-    title: "Lorem ipsum in French",
-    content:
-      "J’en dis autant de ceux qui, par mollesse d’esprit, c’est-à-dire par la crainte de la peine et de la douleur, manquent aux devoirs de la vie. Et il est très facile de rendre raison de ce que j’avance."
-  }
-];
+const articles = [];
 
 // Return the articles list in JSON format
 app.get("/api/articles", (request, response) => {
