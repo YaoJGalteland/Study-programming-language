@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning JS web page</title>
+</head>
+
+<body>
+  
+    <h1>Learning JS is fun</h1>
+    <h2>1. Events</h2>
+    <!-- Event-driven programming -->
+    <div id="buttoncontent"></div>
+    
+    <!-- form -->
+    <form>
+      <h2>2. Signup form</h2>
+      <p>
+        <label for="username">Username</label>:
+        <input type="text" name="username" id="username" required>
+        <span id="usernameHelp"></span>
+      </p>
+      <p>
+        <label for="password">Password</label>:
+        <input type="password" name="password" id="password" required>
+        <span id="passwordHelp"></span>
+      </p>
+      <p>
+        <label for="emailAddress">Email address</label>:
+        <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@domain">
+        <span id="emailHelp"></span>
+      </p>
+      <p>
+        <input type="checkbox" name="confirmation" id="confirmation">
+        <label for="confirmation">Send me a confirmation email</label>
+        <br>
+        <span id="confirmationHelp"></span>
+      </p>
+      <p>
+        <input type="radio" name="subscription" id="newsroom" value="newspromo">
+        <label for="newsroom">Subscribe me to newsletters and promotions</label>
+        <br>
+        <input type="radio" name="subscription" id="news" value="news">
+        <label for="news">Subscribe me only to the newsletter</label>
+        <br>
+        <input type="radio" name="subscription" id="no" value="no" checked>
+        <label for="no">No subscriptions</label>
+        <br>
+        <span id="subscriptionHelp"></span>
+      </p>
+      <p>
+        <label for="nationality">Nationality</label>:
+        <select name="nationality" id="nationality">
+          <option value="US" selected>American</option>
+          <option value="FR">French</option>
+          <option value="ES">Spanish</option>
+          <option value="XX">Other</option>
+        </select>
+        <br>
+        <span id="nationalityHelp"></span>
+      </p>
+    
+      <input type="submit" value="Submit">
+      <input type="reset" value="Cancel">
+    </form>
+    <div id="formsubresult"></div>
+
+    <!-- Web communication. -->
+
+    <h2>3. Web communication</h2>
+    <h3>3.1 Get data from public API</h3>
+    <div id="webdata"></div>
+    <h3>3.2 Create your own API, Send and get data</h3>
+    <h4>Add new article</h4>
+    <form>   
+          <label for="title">Title</label>:
+          <input type="text" name="title" id="title" required>
+      <br><br>
+          <label for="content">Content</label>:
+          <input type="text" name="content" id="content" required>
+      <br><br>
+      <input type="submit" value="Add">
+    </form>
+    <p id="senddata"></p>
+   
+
+  <!-- Update the webpage.html to load a client JavaScript file. -->
+    <script src="/public.js"></script>
+
+</body>
+
+</html>
