@@ -10,7 +10,7 @@ var remainingTickets uint = 50
 
 func main() {
 
-	greatUsers()
+	greetUsers()
 	for {
 		var userTickets uint
 		// asking for user input
@@ -50,7 +50,7 @@ func main() {
 }
 
 // function
-func greatUsers() {
+func greetUsers() {
 	fmt.Println("Welcome!")
 }
 
