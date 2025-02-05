@@ -3,14 +3,20 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
+	"time"
 )
 
 // package level variable, can be accessed inside any funcs
 var remainingTickets uint = 50
 
+var wg = sync.WaitGroup{}
+
 func main() {
 
 	greetUsers()
+	var counter int = 0
+
 	for {
 		var userTickets uint
 		// asking for user input
@@ -45,13 +51,41 @@ func main() {
 			break // ends the program
 		}
 
-	}
+		// map
+		var userData = make(map[string]string) // create an empty map
+		userData["firstName"] = "nana"
+		userData["lastName"] = "lala"
+		fmt.Printf("user data =\t%v\n", userData)
 
+		// create an empty list of maps:
+		// var bookings_map = make([]map[string]string,0)
+
+		wg.Add(counter + 1)
+		// concurrency
+		go send()
+
+	}
+	wg.Wait()
+
+}
+
+// struct
+type User struct {
+	firstName string
+	lastName  string
+	email     string
+	age       uint
 }
 
 // function
 func greetUsers() {
 	fmt.Println("Welcome!")
+}
+
+func send() {
+	time.Sleep(10 * time.Second)
+	fmt.Println("sent data!")
+	wg.Done()
 }
 
 func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
